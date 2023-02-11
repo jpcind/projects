@@ -46,7 +46,7 @@ X = [[1, 1, 2, 2],
 Y = [2, 2, 2, 1, 1, 1, 2, 2, 2, 1]
 
 # fitting the decision tree to the data
-clf = tree.DecisionTreeClassifier(criterion='entropy')
+clf = tree.DecisionTreeClassifier(criterion='entropy', max_depth=4)
 clf = clf.fit(X, Y)
 
 ## plotting the decision tree
