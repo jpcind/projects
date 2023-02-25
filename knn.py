@@ -91,11 +91,11 @@ for i in range(len(Y_features)):
 
     # compare the prediction with the true label of the test instance to start calculating the error rate.
     # --> add your Python code here
-correct_counter = 0
+counter = 0
 for i in range(len(class_pred_list)):
     if class_pred_list[i] == Y_classes[i]:
-        correct_counter += 1
-error_rate = correct_counter/len(class_pred_list)
+        counter += 1
+error_rate = counter/len(class_pred_list)
 
 # print the error rate
 # --> add your Python code here
