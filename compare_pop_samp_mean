@@ -1,0 +1,29 @@
+import random
+
+
+x = [7.12, 9.43, 6.92, 6.06, 5.44, 3.03, 5.85, 4.04, 4.05, 2.99,
+5.55, 6.01, 3.52, 3.25, 4.73, 4.59, 4.87, 4.44, 3.95, 5.25]
+mysum = 0
+for i in x:
+    mysum += i
+print("mean of population: {}".format(round(mysum / len(x), 5)))
+
+newsum = mysum
+
+# print(random.choice(x))
+
+newlist = []
+samplesize = 10
+for i in range(1000):
+    if random.choice(x) in newlist:
+        i -= 1
+        continue
+    newlist.append(random.choice(x))
+    if len(newlist) == samplesize:
+        break
+# print(newlist)
+
+mysum = 0
+for i in newlist:
+    mysum += i
+print("mean of sample with size {}: {}".format(len(newlist), round(mysum/len(newlist), 5)))
